@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family:sans-serif;
+}
+
+body {
+    background: #e3e9f7;
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+ 
+}
+
+/* Header Section */
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 80%;
+    height: 70px;
+    background:#fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 0 0 10px 10px ;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 75px;
+    margin-top: 8px;
+}
+
+nav .logo{
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: #212526;
+    display: block;
+    margin: 0 2px;
+    font-weight: 600;
+    padding: 8px 16px;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+nav ul li a:hover{
+    background: #f0f0f3;
+}
+
+nav ul li a.active{
+    background: #675cff;
+    color: #fff;
+}
+
+.humberger {
+    display: none;  
+    height: fit-content;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.humberger:hover{
+    background: #f6f4ff;
+}
+
+.humberger div{
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background:#212526; 
+}
+
+/* End Of The Header Section  */
+
+
+/* Footer section */
+
+.footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #24262b;
+    padding: 70px 0;
+    line-height: 1.5;
+    font-family: 'Poppins' , sans-serif;
+}
+
+
+.footer-container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform:capitalize;
+    margin-bottom: 35px;
+    font-weight:500 ;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom:10px ;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+     text-decoration: none;
+     font-weight: 300;
+     color: #bbb;
+     display: block;
+     transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+}
+
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255,0.2);
+    margin:0 10px 10px 0;
+    padding: 12px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transform: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color:#fff ;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+    /* Header section */
+
+    header {
+        width: 90%;
+        padding: 0 20px;
+    }
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        z-index:999;
+        width: 280px;
+        height: 100vh;
+        background: #fefefe;
+        transition: 0.2s;
+        box-shadow: 2px 0 20px 0 rgba(0,0,0,0.05);
+    }
+    #nav_check:checked ~ nav{
+        left: 0;
+    }
+    nav .logo{
+        display: flex;
+        align-items: center;
+        height: 70px;
+        margin-left: 30px;
+    }
+    nav ul li a {
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+    nav ul {
+        display: block;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+    .humberger{
+        display: block;
+    }
+
+    /* Footer section */
+
+     .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+     }
+
+}
+
+@media (max-width:574px) {
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
